@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amjad's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- daisyUI plugin -->
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <div class="drawer drawer-end lg:drawer-open bg-[url(/Img/Pngtree.png)] bg-contain sm:bg-cover bg-center">
+    <div class="drawer drawer-end lg:drawer-open bg-[url(/Img/Pngtree.png)] bg-cover bg-fixed">
         <input type="checkbox" name="" id="my-drawer-1" class="drawer-toggle">
         <div class="drawer-content shadow backdrop-blur-xl">
 
@@ -54,7 +55,7 @@
                 <!-- light/dark modes -->
                 <label class="swap swap-rotate">
                     <!-- this hidden checkbox controls the state -->
-                    <input type="checkbox" class="theme-controller " value="dark" />
+                    <input type="checkbox" class="theme-controller " value="dark" checked />
 
                     <!-- sun icon -->
                     <svg class="swap-off size-5 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -70,11 +71,12 @@
                 </label>
             </nav>
 
-            <div class="hero min-h-screen ">
+            <div class="hero min-h-screen">
                 <div class="w-full h-full"></div>
                 <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                    <div class="text-center sm:text-start">
-                        <h1 class="text-6xl font-bold"><span class="text-info">Hello</span>, I'm Amgad</h1>
+                    <div class="text-center">
+                        <h1 class="text-6xl sm:text-8xl font-bold"><span class="text-info block">Hello,</span>I'm Amgad
+                        </h1>
                         <p class="py-6">
                             TALL-Stack | Full-Stack Desktop Developer
                             | UI UX Designer
@@ -84,12 +86,147 @@
                 </div>
             </div>
 
+            <!-- project 1 YemenIN -->
+            <div class="project1 my-32">
+                <div class="hero">
+                    <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
+                        <div
+                            class="card sm:card-side w-full sm:h-90 bg-white/10 hover:bg-white/5 transition shadow-2xl">
+                            <figure class="flex-shrink-0">
+                                <img src="Img/Screenshots/screen (6).png" class="h-full object-cover" alt="Movie" />
+                            </figure>
 
+                            <!-- Card body fills only available vertical space -->
+                            <div class="card-body">
+                                <h2 class="card-title text-md">
+                                    Integrated Career & Social Platform
+                                </h2>
+                                <span class="text-sm text-base-content/80">Full-Stack Development (Team Project)</span>
+
+                                <!-- Paragraph grows and scrolls if needed -->
+                                <p class=" overflow-auto">
+                                    This project is a web platform that blends social media features with career
+                                    guidance
+                                    powered by generative AI, designed as a beta simulation similar to LinkedIn.
+                                </p>
+
+                                <!-- Actions pinned at bottom -->
+                                <div class="card-actions justify-end">
+                                    <a href="https://github.com/Friend750/jobhub.git"
+                                        class="btn btn-primary/50 sm:w-full">
+                                        Visit on <i class="fa-brands fa-github fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="hero">
+                    <div class="hero-content flex flex-col">
+                        <p class="">Screenshots</p>
+                        <div
+                            class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (5).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (1).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (2).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (4).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project1 my-32">
+                <!-- project 2 CareerAI -->
+                <div class="hero">
+                    <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
+                        <div
+                            class="card sm:card-side w-full sm:h-90 bg-white/10 hover:bg-white/5 transition shadow-2xl">
+                            <figure class="flex-shrink-0">
+                                <img src="Img/Screenshots/screen (3).png" class="h-full object-cover" alt="Movie" />
+                            </figure>
+
+                            <!-- Card body fills only available vertical space -->
+                            <div class="card-body">
+                                <h2 class="card-title text-md">
+                                    CareerAI – AI Career Advisor
+                                </h2>
+                                <span class="text-sm text-base-content/80">Full-Stack Development (Hackathon
+                                    Project)</span>
+
+                                <!-- Paragraph grows and scrolls if needed -->
+                                <p class=" overflow-auto">
+                                    A web platform using generative AI for career guidance. It checks and analysis the
+                                    resume of the user to give a Report about the Resumes and makes a quick Questions
+                                    session the is optionally by check to analyze the soft and technical skills.
+                                </p>
+
+                                <!-- Actions pinned at bottom -->
+                                <div class="card-actions justify-end">
+                                    <a href="https://github.com/Hussein1423/CareerBoost.git"
+                                        class="btn btn-primary/50 sm:w-full">
+                                        Visit on <i class="fa-brands fa-github fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- project 2 CareerAI -->
+                <div class="hero">
+                    <div class="hero-content flex flex-col">
+                        <p class="">Screenshots</p>
+                        <div
+                            class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
+                            <div class="carousel-item relative">
+                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
+                                <div
+                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
+                                    <p class="">SOON</p>
+                                    <small class="opacity-50">In maintenance</small>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative">
+                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
+                                <div
+                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
+                                    <p class="">SOON</p>
+                                    <small class="opacity-50">In maintenance</small>
+                                </div>
+                            </div>
+                            <div class="carousel-item relative">
+                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
+                                <div
+                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
+                                    <p class="">SOON</p>
+                                    <small class="opacity-50">In maintenance</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
+
         <div class="drawer-side sm:shadow-sm overflow-visible sm:hidden">
-            <label for="my-drawer-1" class="drawer-overlay bg-white/10"></label>
+            <label for="my-drawer-1" class="drawer-overlay bg-white/10 dark:bg-neutral/10"></label>
             <div
-                class="flex min-h-full flex-col bg-white/10 text-white-content backdrop-blur-xl border-1 border-base-300 ">
+                class="flex min-h-full flex-col bg-white/10 dark:bg-neutral/10 text-white-content backdrop-blur-xl border-1 border-base-300 ">
                 <ul class="menu w-70 sm:w-fit p-4">
                     <!-- Home -->
                     <li>
