@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -45,10 +45,10 @@
                 <!-- Nav menu -->
                 <div class="hidden sm:flex">
                     <ul class="menu menu-horizontal">
-                        <li><a href="#" class="">Home</a></li>
-                        <li><a href="#" class="">Projects</a></li>
-                        <li><a href="#" class="">About</a></li>
-                        <li><a href="#" class="">Contact</a></li>
+                        <li><a href="#SecHome" class="">Home</a></li>
+                        <li><a href="#SecProjects" class="">Projects</a></li>
+                        <li><a href="#SecAbout" class="">About</a></li>
+                        <li><a href="#SecContact" class="">Contact</a></li>
                     </ul>
                 </div>
 
@@ -71,7 +71,7 @@
                 </label>
             </nav>
 
-            <div class="hero min-h-screen">
+            <div class="hero min-h-screen" id="SecHome">
                 <div class="w-full h-full"></div>
                 <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
                     <div class="text-center">
@@ -86,8 +86,8 @@
                 </div>
             </div>
 
-            <!-- project 1 YemenIN -->
-            <div class="project1 my-32">
+            <div class="project1 my-32" id="SecProjects">
+                <!-- project 1 YemenIN -->
                 <div class="hero">
                     <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
                         <div
@@ -112,8 +112,7 @@
 
                                 <!-- Actions pinned at bottom -->
                                 <div class="card-actions justify-end">
-                                    <a href="https://github.com/Friend750/jobhub.git"
-                                        class="btn btn-primary/50 sm:w-full">
+                                    <a href="https://github.com/Friend750/jobhub.git" class="btn btn-info/50 sm:w-full">
                                         Visit on <i class="fa-brands fa-github fa-lg"></i>
                                     </a>
                                 </div>
@@ -167,7 +166,7 @@
                                     Project)</span>
 
                                 <!-- Paragraph grows and scrolls if needed -->
-                                <p class=" overflow-auto">
+                                <p class="overflow-auto">
                                     A web platform using generative AI for career guidance. It checks and analysis the
                                     resume of the user to give a Report about the Resumes and makes a quick Questions
                                     session the is optionally by check to analyze the soft and technical skills.
@@ -176,7 +175,7 @@
                                 <!-- Actions pinned at bottom -->
                                 <div class="card-actions justify-end">
                                     <a href="https://github.com/Hussein1423/CareerBoost.git"
-                                        class="btn btn-primary/50 sm:w-full">
+                                        class="btn btn-info/50 sm:w-full">
                                         Visit on <i class="fa-brands fa-github fa-lg"></i>
                                     </a>
                                 </div>
@@ -221,6 +220,73 @@
                 </div>
 
             </div>
+
+            <div id="SecAbout" class="hero min-h-screen">
+                <div class="hero-content flex-col sm:flex-row items-center gap-10 max-w-4xl">
+
+                    <!-- Profile Image -->
+                    <img src="Img/amjad.png" class="size-48 sm:size-60 rounded-full border-4 border-info shadow-lg"
+                        alt="profile image">
+
+                    <!-- Text Content -->
+                    <div class="text-center sm:text-left space-y-4">
+                        <h1 class="text-3xl font-bold text-info">About Me</h1>
+
+                        <p class="text-base-content leading-relaxed">
+                            I’m a motivated and detail-oriented Junior Programmer with a
+                            <span class="font-semibold text-info">Bachelor’s degree in Computer Science</span>
+                            and hands-on experience in full-stack web development using
+                            <span class="font-semibold">Tailwind, Alpine JS, Laravel, Livewire, and
+                                MySQL</span>.
+                        </p>
+
+                        <p class="text-base-content leading-relaxed">
+                            Skilled in object-oriented programming, algorithmic problem-solving, and database
+                            management.
+                            Strong foundation in software development principles and a commitment to continuous learning
+                            and professional growth.
+                        </p>
+
+                        <p class="text-base-content leading-relaxed">
+                            Seeking an opportunity to contribute to dynamic development teams and apply technical skills
+                            to real-world challenges.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <footer id="SecContact" class="footer footer-center bg-transparent py-10">
+                <aside>
+                    <a href="#" class="text-xl btn btn-ghost font-mono">
+                        <p>&lt;Amgad<span class="text-info">/</span>&gt;</p>
+                    </a>
+                </aside>
+                <nav class="grid-flow-col">
+                    <!-- Email -->
+                    <a href="mailto:amjadjaloom.job@gmail.com" class="hover:text-info transition-colors">
+                        <i class="fa-solid fa-square-envelope fa-2xl"></i>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/amjad-jaloum" target="_blank"
+                        class="hover:text-info transition-colors">
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/amjad-galaom-70079120b" target="_blank"
+                        class="hover:text-info transition-colors">
+                        <i class="fa-brands fa-square-linkedin fa-2xl"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/7.amjad.7" target="_blank"
+                        class="hover:text-info transition-colors">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                </nav>
+            </footer>
         </div>
 
         <div class="drawer-side sm:shadow-sm overflow-visible sm:hidden">
