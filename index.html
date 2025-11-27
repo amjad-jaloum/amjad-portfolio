@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.9/cdn.min.js" defer></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                         <p>&lt;Amgad<span class="text-info">/</span>&gt;</p>
                     </a>
                 </div>
-    
+
                 <!-- Sidebar toggle icon -->
                 <div class="flex-none sm:hidden">
                     <label for="my-drawer-1" aria-label="open sidebar" class="btn btn-square btn-ghost ">
@@ -39,7 +40,7 @@
                         </svg>
                     </label>
                 </div>
-    
+
                 <!-- Nav menu -->
                 <div class="hidden sm:flex">
                     <ul class="menu menu-horizontal">
@@ -49,18 +50,18 @@
                         <li><a href="#SecContact" class="">Contact</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- light/dark modes -->
                 <label class="swap swap-rotate">
                     <!-- this hidden checkbox controls the state -->
                     <input type="checkbox" class="theme-controller " value="dark" checked />
-    
+
                     <!-- sun icon -->
                     <svg class="swap-off size-5 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
                             d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
                     </svg>
-    
+
                     <!-- moon icon -->
                     <svg class="swap-on size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path
@@ -80,16 +81,17 @@
                             | UI UX Designer
                             Photoshop Designer | Content Creater
                         </p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="project1 my-32" id="SecProjects">
-                <!-- project 1 YemenIN -->
+            <!-- project 1 YemenIN -->
+            <div class="project1 my-32" id="SecProjects" x-data="{showScreenshots: false}">
+
                 <div class="hero">
                     <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                        <div
-                            class="card sm:card-side w-full sm:h-90 bg-white/10 hover:bg-white/5 transition shadow-2xl">
+                        <div class="card sm:card-side w-full sm:h-90 bg-white/5 shadow-2xl">
                             <figure class="flex-shrink-0">
                                 <img src="Img/Screenshots/screen (6).png" class="h-full object-cover" alt="Movie" />
                             </figure>
@@ -110,7 +112,10 @@
 
                                 <!-- Actions pinned at bottom -->
                                 <div class="card-actions justify-end">
-                                    <a href="https://github.com/Friend750/jobhub.git" class="btn btn-info/50 sm:w-full">
+                                    <button type="button" class="btn btn-ghost flex-1 sm:flex-none sm:w-full"
+                                        @click="showScreenshots = !showScreenshots"><span
+                                            x-text="showScreenshots? 'Hide': 'Screenshots'"></span></button>
+                                    <a href="https://github.com/Friend750/jobhub.git" class="btn flex-1">
                                         Visit on <i class="fa-brands fa-github fa-lg"></i>
                                     </a>
                                 </div>
@@ -120,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="hero">
+                <div class="hero" x-show="showScreenshots" x-transition>
                     <div class="hero-content flex flex-col">
                         <p class="">Screenshots</p>
                         <div
@@ -143,14 +148,15 @@
                     </div>
                 </div>
 
+
             </div>
 
-            <div class="project1 my-32">
-                <!-- project 2 CareerAI -->
+            <!-- project 2 CareerAI -->
+            <div class="project1 my-32" x-data="{showScreenshots: false}">
                 <div class="hero">
                     <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
                         <div
-                            class="card sm:card-side w-full sm:h-90 bg-white/10 hover:bg-white/5 transition shadow-2xl">
+                            class="card sm:card-side w-full sm:h-90 bg-white/10 shadow-2xl">
                             <figure class="flex-shrink-0">
                                 <img src="Img/Screenshots/screen (3).png" class="h-full object-cover" alt="Movie" />
                             </figure>
@@ -172,51 +178,38 @@
 
                                 <!-- Actions pinned at bottom -->
                                 <div class="card-actions justify-end">
-                                    <a href="https://github.com/Hussein1423/CareerBoost.git"
-                                        class="btn btn-info/50 sm:w-full">
+                                    <button type="button"
+                                        class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip tooltip-bottom sm:hidden"
+                                        data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
+                                        Screenshots
+                                    </button>
+                                    <a href="https://github.com/Hussein1423/CareerBoost.git" class="btn flex-1">
                                         Visit on <i class="fa-brands fa-github fa-lg"></i>
                                     </a>
+                                    <button type="button"
+                                        class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip sm:tooltip-right hidden sm:flex"
+                                        data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
+                                        Screenshots
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- project 2 CareerAI -->
-                <div class="hero">
-                    <div class="hero-content flex flex-col">
-                        <p class="">Screenshots</p>
-                        <div
-                            class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
-                            <div class="carousel-item relative">
-                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
-                                <div
-                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
-                                    <p class="">SOON</p>
-                                    <small class="opacity-50">In maintenance</small>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative">
-                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
-                                <div
-                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
-                                    <p class="">SOON</p>
-                                    <small class="opacity-50">In maintenance</small>
-                                </div>
-                            </div>
-                            <div class="carousel-item relative">
-                                <img src="Img/Screenshots/screen (3).png" class="rounded-box h-42 sm:h-82" />
-                                <div
-                                    class="w-full h-full bg-neutral-900 absolute grid place-content-center rounded-lg text-center">
-                                    <p class="">SOON</p>
-                                    <small class="opacity-50">In maintenance</small>
-                                </div>
-                            </div>
+                <div x-show="showScreenshots" x-transition>
+                    <div class="grid place-content-center">
+                        <div role="alert" class="alert alert-info alert-soft w-fit">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="h-6 w-6 shrink-0 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>New Screenshots are in maintenance.</span>
                         </div>
 
                     </div>
                 </div>
-
             </div>
 
             <div id="SecAbout" class="hero min-h-screen">
@@ -288,8 +281,7 @@
 
         <div class="drawer-side overflow-visible sm:hidden">
             <label for="my-drawer-1" class="drawer-overlay bg-white/10 dark:bg-neutral/10"></label>
-            <div
-                class="flex min-h-full flex-col bg-white/10 dark:bg-neutral/10 text-white-content backdrop-blur-xl">
+            <div class="flex min-h-full flex-col bg-white/10 dark:bg-neutral/10 text-white-content backdrop-blur-xl">
                 <ul class="menu w-70 sm:w-fit p-4">
                     <!-- Home -->
                     <li>
