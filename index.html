@@ -12,6 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.9/cdn.min.js" defer></script>
 </head>
 
@@ -72,125 +79,141 @@
 
             <div class="hero min-h-screen" id="SecHome">
                 <div class="w-full h-full"></div>
-                <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                    <div class="text-center">
-                        <h1 class="text-6xl sm:text-8xl font-bold"><span class="text-info block">Hello,</span>I'm Amgad
-                        </h1>
-                        <p class="py-6">
-                            TALL-Stack | Full-Stack Desktop Developer
-                            | UI UX Designer
-                            Photoshop Designer | Content Creater
-                        </p>
+                <div x-data="{ shown: false }" x-intersect="shown = true">
+                    <div x-show="shown" x-transition.duration.900ms>
+                        <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
+                            <div class="text-center">
+                                <h1 class="text-6xl sm:text-8xl font-bold"><span
+                                        class="text-info block">Hello,</span>I'm Amgad
+                                </h1>
+                                <p class="py-6">
+                                    TALL-Stack | Full-Stack Desktop Developer
+                                    | UI UX Designer
+                                    Photoshop Designer | Content Creater
+                                </p>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+
+
             <!-- project 1 YemenIN -->
             <div class="project1 my-32" id="SecProjects" x-data="{showScreenshots: false}">
-
                 <div class="hero">
                     <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                        <div class="card sm:card-side w-full sm:h-90 bg-white/5 shadow-2xl">
-                            <figure class="flex-shrink-0">
-                                <img src="Img/Screenshots/screen (6).png" class="h-full object-cover" alt="Movie" />
-                            </figure>
+                        <div x-data="{ shown: false }" x-intersect.full="shown = true">
+                            <div x-show="shown" x-transition.duration.900ms>
+                                <div class="card sm:card-side w-full sm:h-90 bg-white/5 shadow-2xl">
+                                    <figure class="flex-shrink-0">
+                                        <img src="Img/Screenshots/screen (6).png" class="h-full object-cover"
+                                            alt="Movie" />
+                                    </figure>
 
-                            <!-- Card body fills only available vertical space -->
-                            <div class="card-body">
-                                <h2 class="card-title text-md">
-                                    Integrated Career & Social Platform
-                                </h2>
-                                <span class="text-sm text-base-content/80">Full-Stack Development (Team Project)</span>
+                                    <!-- Card body fills only available vertical space -->
+                                    <div class="card-body">
+                                        <h2 class="card-title text-md">
+                                            Integrated Career & Social Platform
+                                        </h2>
+                                        <span class="text-sm text-base-content/80">Full-Stack Development (Team
+                                            Project)</span>
 
-                                <!-- Paragraph grows and scrolls if needed -->
-                                <p class=" overflow-auto">
-                                    This project is a web platform that blends social media features with career
-                                    guidance
-                                    powered by generative AI, designed as a beta simulation similar to LinkedIn.
-                                </p>
+                                        <!-- Paragraph grows and scrolls if needed -->
+                                        <p class=" overflow-auto">
+                                            This project is a web platform that blends social media features with career
+                                            guidance
+                                            powered by generative AI, designed as a beta simulation similar to LinkedIn.
+                                        </p>
 
-                                <!-- Actions pinned at bottom -->
-                                <div class="card-actions justify-end">
-                                    <button type="button" class="btn btn-ghost flex-1 sm:flex-none sm:w-full"
-                                        @click="showScreenshots = !showScreenshots"><span
-                                            x-text="showScreenshots? 'Hide': 'Screenshots'"></span></button>
-                                    <a href="https://github.com/Friend750/jobhub.git" class="btn flex-1">
-                                        Visit on <i class="fa-brands fa-github fa-lg"></i>
-                                    </a>
+                                        <!-- Actions pinned at bottom -->
+                                        <div class="card-actions justify-end">
+                                            <button type="button" class="btn btn-ghost flex-1 sm:flex-none sm:w-full"
+                                                @click="showScreenshots = !showScreenshots"><span
+                                                    x-text="showScreenshots? 'Hide': 'Screenshots'"></span></button>
+                                            <a href="https://github.com/Friend750/jobhub.git" class="btn flex-1">
+                                                Visit on <i class="fa-brands fa-github fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div>
+                    <!-- Screenshots -->
+                    <div class="hero" x-show="showScreenshots" x-transition>
+                        <div class="hero-content flex flex-col">
+                            <p class="">Screenshots</p>
+                            <div
+                                class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
+                                <div class="carousel-item">
+                                    <img src="Img/Screenshots/screen (5).png" class="rounded-box h-42 sm:h-82" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Img/Screenshots/screen (1).png" class="rounded-box h-42 sm:h-82" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Img/Screenshots/screen (2).png" class="rounded-box h-42 sm:h-82" />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Img/Screenshots/screen (4).png" class="rounded-box h-42 sm:h-82" />
+                                </div>
 
-                <div class="hero" x-show="showScreenshots" x-transition>
-                    <div class="hero-content flex flex-col">
-                        <p class="">Screenshots</p>
-                        <div
-                            class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
-                            <div class="carousel-item">
-                                <img src="Img/Screenshots/screen (5).png" class="rounded-box h-42 sm:h-82" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Img/Screenshots/screen (1).png" class="rounded-box h-42 sm:h-82" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Img/Screenshots/screen (2).png" class="rounded-box h-42 sm:h-82" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Img/Screenshots/screen (4).png" class="rounded-box h-42 sm:h-82" />
                             </div>
 
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
 
             <!-- project 2 CareerAI -->
             <div class="project1 my-32" x-data="{showScreenshots: false}">
+
                 <div class="hero">
                     <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                        <div
-                            class="card sm:card-side w-full sm:h-90 bg-white/10 shadow-2xl">
-                            <figure class="flex-shrink-0">
-                                <img src="Img/Screenshots/screen (3).png" class="h-full object-cover" alt="Movie" />
-                            </figure>
+                        <div x-data="{ shown: false }" x-intersect.full="shown = true">
+                            <div x-show="shown" x-transition.duration.900ms>
+                                <div class="card sm:card-side w-full sm:h-90 bg-white/10 shadow-2xl">
+                                    <figure class="flex-shrink-0">
+                                        <img src="Img/Screenshots/screen (3).png" class="h-full object-cover"
+                                            alt="Movie" />
+                                    </figure>
 
-                            <!-- Card body fills only available vertical space -->
-                            <div class="card-body">
-                                <h2 class="card-title text-md">
-                                    CareerAI – AI Career Advisor
-                                </h2>
-                                <span class="text-sm text-base-content/80">Full-Stack Development (Hackathon
-                                    Project)</span>
+                                    <!-- Card body fills only available vertical space -->
+                                    <div class="card-body">
+                                        <h2 class="card-title text-md">
+                                            CareerAI – AI Career Advisor
+                                        </h2>
+                                        <span class="text-sm text-base-content/80">Full-Stack Development (Hackathon
+                                            Project)</span>
 
-                                <!-- Paragraph grows and scrolls if needed -->
-                                <p class="overflow-auto">
-                                    A web platform using generative AI for career guidance. It checks and analysis the
-                                    resume of the user to give a Report about the Resumes and makes a quick Questions
-                                    session the is optionally by check to analyze the soft and technical skills.
-                                </p>
+                                        <!-- Paragraph grows and scrolls if needed -->
+                                        <p class="overflow-auto">
+                                            A web platform using generative AI for career guidance. It checks and
+                                            analysis the
+                                            resume of the user to give a Report about the Resumes and makes a quick
+                                            Questions
+                                            session the is optionally by check to analyze the soft and technical skills.
+                                        </p>
 
-                                <!-- Actions pinned at bottom -->
-                                <div class="card-actions justify-end">
-                                    <button type="button"
-                                        class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip tooltip-bottom sm:hidden"
-                                        data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
-                                        Screenshots
-                                    </button>
-                                    <a href="https://github.com/Hussein1423/CareerBoost.git" class="btn flex-1">
-                                        Visit on <i class="fa-brands fa-github fa-lg"></i>
-                                    </a>
-                                    <button type="button"
-                                        class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip sm:tooltip-right hidden sm:flex"
-                                        data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
-                                        Screenshots
-                                    </button>
+                                        <!-- Actions pinned at bottom -->
+                                        <div class="card-actions justify-end">
+                                            <button type="button"
+                                                class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip tooltip-bottom sm:hidden"
+                                                data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
+                                                Screenshots
+                                            </button>
+                                            <a href="https://github.com/Hussein1423/CareerBoost.git" class="btn flex-1">
+                                                Visit on <i class="fa-brands fa-github fa-lg"></i>
+                                            </a>
+                                            <button type="button"
+                                                class="btn btn-ghost flex-1 sm:flex-none sm:w-full tooltip sm:tooltip-right hidden sm:flex"
+                                                data-tip="Coming Soon" @click="showScreenshots = !showScreenshots">
+                                                Screenshots
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,84 +222,95 @@
 
                 <div x-show="showScreenshots" x-transition>
                     <!-- <div class="grid place-content-center">
-                        <div role="alert" class="alert alert-info alert-soft w-fit">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                class="h-6 w-6 shrink-0 stroke-current">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span>New Screenshots are in maintenance.</span>
-                        </div>
-
-                    </div> -->
+                                <div role="alert" class="alert alert-info alert-soft w-fit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        class="h-6 w-6 shrink-0 stroke-current">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>New Screenshots are in maintenance.</span>
+                                </div>
+        
+                            </div> -->
                 </div>
             </div>
 
+
             <div id="SecAbout" class="hero min-h-screen">
-                <div class="hero-content flex-col sm:flex-row items-center gap-10 max-w-4xl">
-
-                    <!-- Profile Image -->
-                    <img src="Img/amjad.png" class="size-48 sm:size-60 rounded-full border-4 border-info shadow-lg"
-                        alt="profile image">
-
-                    <!-- Text Content -->
-                    <div class="text-center sm:text-left space-y-4">
-                        <h1 class="text-3xl font-bold text-info">About Me</h1>
-
-                        <p class="text-base-content leading-relaxed">
-                            I’m a motivated and detail-oriented Junior Programmer with a
-                            <span class="font-semibold text-info">Bachelor’s degree in Computer Science</span>
-                            and hands-on experience in full-stack web development using
-                            <span class="font-semibold">Tailwind, Alpine JS, Laravel, Livewire, and
-                                MySQL</span>.
-                        </p>
-
-                        <p class="text-base-content leading-relaxed">
-                            Skilled in object-oriented programming, algorithmic problem-solving, and database
-                            management.
-                            Strong foundation in software development principles and a commitment to continuous learning
-                            and professional growth.
-                        </p>
-
-                        <p class="text-base-content leading-relaxed">
-                            Seeking an opportunity to contribute to dynamic development teams and apply technical skills
-                            to real-world challenges.
-                        </p>
-
+                <div x-data="{ shown: false }" x-intersect.full="shown = true">
+                    <div x-show="shown" x-transition.duration.900ms>
+                        <div class="hero-content flex-col sm:flex-row items-center gap-10 max-w-4xl">
+        
+                            <!-- Profile Image -->
+                            <img src="Img/amjad.png" class="size-48 sm:size-60 rounded-full border-4 border-info shadow-lg"
+                                alt="profile image">
+        
+                            <!-- Text Content -->
+                            <div class="text-center sm:text-left space-y-4">
+                                <h1 class="text-3xl font-bold text-info">About Me</h1>
+        
+                                <p class="text-base-content leading-relaxed">
+                                    I’m a motivated and detail-oriented Junior Programmer with a
+                                    <span class="font-semibold text-info">Bachelor’s degree in Computer Science</span>
+                                    and hands-on experience in full-stack web development using
+                                    <span class="font-semibold">Tailwind, Alpine JS, Laravel, Livewire, and
+                                        MySQL</span>.
+                                </p>
+        
+                                <p class="text-base-content leading-relaxed">
+                                    Skilled in object-oriented programming, algorithmic problem-solving, and database
+                                    management.
+                                    Strong foundation in software development principles and a commitment to continuous
+                                    learning
+                                    and professional growth.
+                                </p>
+        
+                                <p class="text-base-content leading-relaxed">
+                                    Seeking an opportunity to contribute to dynamic development teams and apply
+                                    technical skills
+                                    to real-world challenges.
+                                </p>
+        
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <footer id="SecContact" class="footer footer-center bg-transparent py-10">
-                <aside>
-                    <a href="#" class="text-xl btn btn-ghost font-mono">
-                        <p>&lt;Amgad<span class="text-info">/</span>&gt;</p>
-                    </a>
-                </aside>
-                <nav class="grid-flow-col">
-                    <!-- Email -->
-                    <a href="mailto:amjadjaloom.job@gmail.com" class="hover:text-info transition-colors">
-                        <i class="fa-solid fa-square-envelope fa-2xl"></i>
-                    </a>
-
-                    <!-- GitHub -->
-                    <a href="https://github.com/amjad-jaloum" target="_blank" class="hover:text-info transition-colors">
-                        <i class="fa-brands fa-square-github fa-2xl"></i>
-                    </a>
-
-                    <!-- LinkedIn -->
-                    <a href="https://linkedin.com/in/amjad-galaom-70079120b" target="_blank"
-                        class="hover:text-info transition-colors">
-                        <i class="fa-brands fa-square-linkedin fa-2xl"></i>
-                    </a>
-
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/7.amjad.7" target="_blank"
-                        class="hover:text-info transition-colors">
-                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
-                    </a>
-                </nav>
-            </footer>
+             <div x-data="{ shown: false }" x-intersect.full="shown = true">
+                <div x-show="shown" x-transition.duration.900ms>
+                    <footer id="SecContact" class="footer footer-center bg-transparent py-10">
+                        <aside>
+                            <a href="#" class="text-xl btn btn-ghost font-mono">
+                                <p>&lt;Amgad<span class="text-info">/</span>&gt;</p>
+                            </a>
+                        </aside>
+                        <nav class="grid-flow-col">
+                            <!-- Email -->
+                            <a href="mailto:amjadjaloom.job@gmail.com" class="hover:text-info transition-colors">
+                                <i class="fa-solid fa-square-envelope fa-2xl"></i>
+                            </a>
+        
+                            <!-- GitHub -->
+                            <a href="https://github.com/amjad-jaloum" target="_blank" class="hover:text-info transition-colors">
+                                <i class="fa-brands fa-square-github fa-2xl"></i>
+                            </a>
+        
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/amjad-galaom-70079120b" target="_blank"
+                                class="hover:text-info transition-colors">
+                                <i class="fa-brands fa-square-linkedin fa-2xl"></i>
+                            </a>
+        
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/7.amjad.7" target="_blank"
+                                class="hover:text-info transition-colors">
+                                <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                            </a>
+                        </nav>
+                    </footer>
+                </div>
+            </div>
         </div>
 
         <div class="drawer-side overflow-visible sm:hidden">
