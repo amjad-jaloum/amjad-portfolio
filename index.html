@@ -23,6 +23,10 @@
 </head>
 
 <body>
+    <style>
+
+
+    </style>
     <div class="drawer drawer-end lg:drawer-open bg-[url(/Img/Pngtree.png)] bg-cover bg-fixed">
         <input type="checkbox" name="" id="my-drawer-1" class="drawer-toggle">
         <div class="drawer-content backdrop-blur-xl">
@@ -141,28 +145,28 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Screenshots -->
-                    <div class="hero" x-show="showScreenshots" x-transition>
-                        <div class="hero-content flex flex-col">
-                            <p class="">Screenshots</p>
-                            <div
-                                class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
-                                <div class="carousel-item">
-                                    <img src="Img/Screenshots/screen (5).png" class="rounded-box h-42 sm:h-82" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="Img/Screenshots/screen (1).png" class="rounded-box h-42 sm:h-82" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="Img/Screenshots/screen (2).png" class="rounded-box h-42 sm:h-82" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="Img/Screenshots/screen (4).png" class="rounded-box h-42 sm:h-82" />
-                                </div>
-
+                </div>
+                <!-- Screenshots -->
+                <div class="hero" x-show="showScreenshots" x-transition>
+                    <div class="hero-content flex flex-col">
+                        <p class="">Screenshots</p>
+                        <div
+                            class="carousel carousel-center bg-white/10 backdrop-blur rounded-box max-w-full space-x-4 p-4 shadow">
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (5).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (1).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (2).png" class="rounded-box h-42 sm:h-82" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/Screenshots/screen (4).png" class="rounded-box h-42 sm:h-82" />
                             </div>
 
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -240,15 +244,16 @@
                 <div x-data="{ shown: false }" x-intersect.full="shown = true">
                     <div x-show="shown" x-transition.duration.900ms>
                         <div class="hero-content flex-col sm:flex-row items-center gap-10 max-w-4xl">
-        
+
                             <!-- Profile Image -->
-                            <img src="Img/amjad.png" class="size-48 sm:size-60 rounded-full border-4 border-info shadow-lg"
+                            <img src="Img/amjad.png"
+                                class="size-48 sm:size-60 rounded-full border-4 border-info shadow-lg"
                                 alt="profile image">
-        
+
                             <!-- Text Content -->
                             <div class="text-center sm:text-left space-y-4">
                                 <h1 class="text-3xl font-bold text-info">About Me</h1>
-        
+
                                 <p class="text-base-content leading-relaxed">
                                     I’m a motivated and detail-oriented Junior Programmer with a
                                     <span class="font-semibold text-info">Bachelor’s degree in Computer Science</span>
@@ -256,7 +261,7 @@
                                     <span class="font-semibold">Tailwind, Alpine JS, Laravel, Livewire, and
                                         MySQL</span>.
                                 </p>
-        
+
                                 <p class="text-base-content leading-relaxed">
                                     Skilled in object-oriented programming, algorithmic problem-solving, and database
                                     management.
@@ -264,20 +269,20 @@
                                     learning
                                     and professional growth.
                                 </p>
-        
+
                                 <p class="text-base-content leading-relaxed">
                                     Seeking an opportunity to contribute to dynamic development teams and apply
                                     technical skills
                                     to real-world challenges.
                                 </p>
-        
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-             <div x-data="{ shown: false }" x-intersect.full="shown = true">
+            <div x-data="{ shown: false }" x-intersect.full="shown = true">
                 <div x-show="shown" x-transition.duration.900ms>
                     <footer id="SecContact" class="footer footer-center bg-transparent py-10">
                         <aside>
@@ -290,18 +295,19 @@
                             <a href="mailto:amjadjaloom.job@gmail.com" class="hover:text-info transition-colors">
                                 <i class="fa-solid fa-square-envelope fa-2xl"></i>
                             </a>
-        
+
                             <!-- GitHub -->
-                            <a href="https://github.com/amjad-jaloum" target="_blank" class="hover:text-info transition-colors">
+                            <a href="https://github.com/amjad-jaloum" target="_blank"
+                                class="hover:text-info transition-colors">
                                 <i class="fa-brands fa-square-github fa-2xl"></i>
                             </a>
-        
+
                             <!-- LinkedIn -->
                             <a href="https://linkedin.com/in/amjad-galaom-70079120b" target="_blank"
                                 class="hover:text-info transition-colors">
                                 <i class="fa-brands fa-square-linkedin fa-2xl"></i>
                             </a>
-        
+
                             <!-- Instagram -->
                             <a href="https://www.instagram.com/7.amjad.7" target="_blank"
                                 class="hover:text-info transition-colors">
@@ -313,13 +319,13 @@
             </div>
         </div>
 
-        <div class="drawer-side overflow-visible sm:hidden">
+        <div class="drawer-side sm:hidden overflow-visible">
             <label for="my-drawer-1" class="drawer-overlay bg-black/10 dark:bg-neutral/10"></label>
             <div class="flex min-h-full flex-col bg-white/10 dark:bg-neutral/10 text-white-content backdrop-blur-xl">
-                <ul class="menu w-70 sm:w-fit p-4 bg-base-100 mask-b-from-10% h-screen">
+                <ul class="menu w-70 sm:w-fit p-4 bg-base-100 mask-b-from-10% h-screen overflow-visible">
                     <!-- Home -->
                     <li>
-                        <a href="#SecHome" class="sm:tooltip sm:tooltip-left" data-tip="Go to homepage">
+                        <a href="#SecHome" class="" data-tip="Go to homepage">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round"
                                 stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"
                                 class="my-1.5 inline-block size-4 sm:size-6">
@@ -334,7 +340,7 @@
 
                     <!-- Projects -->
                     <li>
-                        <a href="#SecProjects" class="sm:tooltip sm:tooltip-left" data-tip="View projects">
+                        <a href="#SecProjects" class="" data-tip="View projects">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round"
                                 stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"
                                 class="my-1.5 inline-block size-4 sm:size-6">
@@ -347,7 +353,7 @@
 
                     <!-- About -->
                     <li>
-                        <a href="#SecAbout" class="sm:tooltip sm:tooltip-left" data-tip="Learn more about me">
+                        <a href="#SecAbout" class="" data-tip="Learn more about me">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round"
                                 stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"
                                 class="my-1.5 inline-block size-4 sm:size-6">
@@ -360,7 +366,7 @@
 
                     <!-- Contact -->
                     <li>
-                        <a href="#SecContact" class="sm:tooltip sm:tooltip-left" data-tip="Get in touch">
+                        <a href="#SecContact" data-tip="Get in touch">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round"
                                 stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor"
                                 class="my-1.5 inline-block size-4 sm:size-6">
@@ -370,6 +376,39 @@
                             </svg>
                             <span class="sm:hidden">Contact me</span>
                         </a>
+                    </li>
+                    <li>
+                        <details class="menu w-full p-0 overflow-visible" open>
+                            <summary>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="my-1.5 size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                                <div role="button" class="">Download my CV</div>
+                            </summary>
+                            </summary>
+
+                            <ul class="mt-2 space-y-1">
+                                <li>
+                                    <a href="MyResumes/Amjad-Galaom-Full-Stack-Web-Developer.pdf" download
+                                        class="link link-hover">
+                                        Web Resume
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="opacity-50 cursor-not-allowed">
+                                        Desktop Resume (Available Soon)
+                                    </span>
+                                </li>
+                                <li>
+                                    <a href="MyResumes/Amjad-Galaom-Graphics-UIUX-Designer.pdf" download
+                                        class="link link-hover">
+                                        UI/UX Resume
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                 </ul>
             </div>
