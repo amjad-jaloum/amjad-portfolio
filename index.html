@@ -83,23 +83,37 @@
                 </label>
             </nav>
 
-
-
             <div class="hero min-h-screen" id="SecHome">
                 <div class="w-full h-full"></div>
                 <div x-data="{ shown: false }" x-intersect="shown = true">
                     <div x-show="shown" x-transition.duration.900ms>
                         <div class="hero-content max-w-md sm:max-w-4xl flex-col sm:flex-row">
-                            <div class="text-center">
-                                <h1 class="text-6xl sm:text-8xl font-bold"><span
-                                        class="text-info block">Hello,</span>I'm Amgad
+                            <div class="sm:flex-1 text-center sm:text-start">
+                                <h1 class="text-6xl font-bold"><span class="text-info block">Hello,</span>I'm Amgad
                                 </h1>
                                 <p class="py-6">
-                                    TALL-Stack | Full-Stack Desktop Developer
+                                    TALL-Stack
+                                    | Full-Stack Desktop Developer
                                     | UI UX Designer
-                                    Photoshop Designer | Content Creater
+                                    | Photoshop Designer
+                                    | Content Creater
                                 </p>
-
+                            </div>
+                            <div
+                                class="mockup-code bg-base-300 text-base-content hidden sm:block w-1/3 mask-b-from-90% mask-r-from-0% mask-radial-from-30% mask-radial-at-left transition-all duration-700">
+                                <pre
+                                    data-prefix="$"><code><span class="text-secondary">enum</span> <span class="text-info font-bold">CoreSkills</span> {</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Tailwind</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Alpine</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Laravel</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Livewire</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Filament</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">CSharp</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">ADO_NET</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">MySQL</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">Git</span>,</code></pre>
+                                <pre data-prefix=">"><code>  <span class="">GitHub</span></code></pre>
+                                <pre data-prefix="$"><code>}</code></pre>
                             </div>
                         </div>
                     </div>
@@ -280,6 +294,33 @@
                                     to real-world challenges.
                                 </p>
 
+                                <div class="dropdown">
+                                    <div tabindex="-1" class="btn">
+                                        Download my Resume
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="my-1.5 size-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                        </svg>
+                                    </div>
+                                    <ul tabindex="0" class="dropdown-content bg-base-300 w-full menu menu-sm mt-1 rounded-lg">
+                                        <li><a href="MyResumes/Amjad-Galaom-Full-Stack-Web-Developer.pdf" download
+                                                class="">
+                                                Web Resume
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span class="opacity-50 cursor-not-allowed">
+                                                Desktop Resume (Available Soon)
+                                            </span>
+                                        </li>
+                                        <li><a href="MyResumes/Amjad-Galaom-Graphics-UIUX-Designer.pdf" download
+                                                class="">
+                                                UI/UX Resume
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
