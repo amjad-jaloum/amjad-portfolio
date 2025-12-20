@@ -64,23 +64,34 @@
                     </ul>
                 </div>
 
-                <!-- light/dark modes -->
-                <label class="swap swap-rotate">
-                    <!-- this hidden checkbox controls the state -->
-                    <input type="checkbox" class="theme-controller" value="dark" checked />
+                <div class="join bg-base-300 rounded-xl items-center border-3 border-base-200 overflow-clip">
+                    <div class="join-item rounded-r-none p-2 hover:bg-base-100 cursor-pointer" id="system-theme-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5Zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <!-- light/dark modes -->
+                    <label class="swap swap-rotate join-item rounded-l-none p-2 hover:bg-base-100">
+                        <!-- this hidden checkbox controls the state -->
+                        <input type="checkbox" class="theme-controller" id="theme-toggle-checkbox" />
 
-                    <!-- sun icon -->
-                    <svg class="swap-off size-5 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-                    </svg>
+                        <!-- sun icon -->
+                        <svg class="swap-off size-5 fill-current " xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                        </svg>
 
-                    <!-- moon icon -->
-                    <svg class="swap-on size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path
-                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-                    </svg>
-                </label>
+                        <!-- moon icon -->
+                        <svg class="swap-on size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                        </svg>
+                    </label>
+                </div>
+
             </nav>
 
             <div class="hero min-h-screen" id="SecHome">
@@ -303,7 +314,8 @@
                                                 d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                         </svg>
                                     </div>
-                                    <ul tabindex="0" class="dropdown-content bg-base-300 w-full menu menu-sm mt-1 rounded-lg">
+                                    <ul tabindex="0"
+                                        class="dropdown-content bg-base-300 w-full menu menu-sm mt-1 rounded-lg">
                                         <li><a href="MyResumes/Amjad-Galaom-Full-Stack-Web-Developer.pdf" download
                                                 class="">
                                                 Web Resume
@@ -558,6 +570,62 @@
 
         </div>
     </div>
+
+    <script>
+        
+        const OStheme = systemTheme('system');
+        const systemBtn = document.getElementById('system-theme-btn');
+        const root = document.documentElement;
+        const savedMode = localStorage.getItem('theme-mode');
+        const activeStateColor = 'bg-info/20';
+
+        // sync checkbox UI
+        const checkbox = document.getElementById('theme-toggle-checkbox');
+        if (checkbox) checkbox.checked = OStheme === 'dark';
+
+        function systemTheme() {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+            if (theme === 'system') {
+                root.setAttribute('data-theme', OStheme);
+            } else {
+                root.setAttribute('data-theme', theme);
+            }
+            systemBtn.classList.toggle(activeStateColor, theme === 'system');
+            localStorage.setItem('theme-mode', theme);
+        }
+
+        if (savedMode === 'light') {
+            applyTheme('light');
+            checkbox.checked = false;
+        } else if (savedMode === 'dark') {
+            applyTheme('dark');
+            checkbox.checked = true;
+        } else {
+            applyTheme('system');
+        }
+
+        checkbox.addEventListener('change', () => {
+            const theme = checkbox.checked ? 'dark' : 'light';
+            applyTheme(theme);
+        });
+
+        systemBtn.addEventListener('click', () => {
+            applyTheme('system');
+            checkbox.checked = OStheme === 'dark';
+        });
+
+        // React to OS changes ONLY in system mode
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (localStorage.getItem('theme-mode') === 'system') {
+                applyTheme('system');
+                checkbox.checked = OStheme === 'dark';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
